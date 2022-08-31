@@ -248,7 +248,7 @@ where
                 }
                 match self.tick().await {
                     Err(ClientError::UnexpectedClose) => {
-                        error!("{}", ClientError::UnexpectedClose);
+                        panic!("{}", ClientError::UnexpectedClose);
                         break
                     }
                     Err(e) => {
